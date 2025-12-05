@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register | Online Quiz</title>
+<style>
+    /* === Background === */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        background: linear-gradient(135deg, #2b1055, #7597de);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* === Form container === */
+    .register-box {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 40px;
+        width: 380px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(12px);
+        color: #fff;
+        text-align: center;
+    }
+
+    .register-box h2 {
+        margin-bottom: 25px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    /* === Input Fields === */
+    .input-box {
+        position: relative;
+        right: 15px;
+        margin-bottom: 25px;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 12px 15px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .input-box input:focus {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 10px #03e9f4; 
+    }
+
+    /* === Button === */
+    .btn {
+        background: #03e9f4;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 12px 15px;
+        color: #111;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #00bcd4;
+        box-shadow: 0 0 15px #03e9f4;
+    }
+
+    /* === Login link === */
+    .register-box p {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .register-box a {
+        color: #03e9f4;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .register-box a:hover {
+        text-decoration:underline;
+    }
+    .input-box ::placeholder{
+        color: silver;
+    }
+</style>
+</head>
+
+<body>
+    <div class="register-box">
+        <h2>Create Account</h2>
+        <form action="RegisterServlet" method="post">
+            <div class="input-box">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="login.jsp">Login</a></p>
+    </div>
+    <!--%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%-->
+</body>
+</html>
